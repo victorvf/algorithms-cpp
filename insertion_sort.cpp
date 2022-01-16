@@ -19,7 +19,6 @@ void print_array (string title, int (&arr) [6]) {
 int main () {
     int i;
     int key;
-    // int arr [6] = {5,2,4,6,1,3};
     int arr [6] = {31,41,59,26,41,58};
 
     print_array("Initial", arr);
@@ -29,7 +28,6 @@ int main () {
         key = arr[j];
         i = j - 1;
 
-        // loop invariant
         while (i >= 0 && arr[i] > key) {
             arr[i+1] = arr[i];
             i--;
