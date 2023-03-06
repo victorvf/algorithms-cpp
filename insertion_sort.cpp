@@ -16,6 +16,8 @@ void print_array (string title, int (&arr) [6]) {
 }
 
 // insertion sort
+// best case -> array was already sorted: O(n)
+// worst case -> array was reverse sorted: O(n2)
 int main () {
     int i;
     int key;
@@ -25,13 +27,13 @@ int main () {
 
     int arr_length = sizeof(arr)/sizeof(arr[0]);
 
-    // starts by the second one
+    // starts with the second
     for (int j = 1; j < arr_length; j++) {
-        key = arr[j]; // second one
+        key = arr[j]; // second
         i = j - 1; // previous index
 
-        // nonincreasing order -> while (i >= 0 && arr[i] < key)
-        // nondecreasing order
+        // decreasing order -> while (i >= 0 && arr[i] < key)
+        // increasing order
         while (i >= 0 && arr[i] > key) {
             arr[i+1] = arr[i];
             i--;
